@@ -2,6 +2,10 @@
 
 # 🔴 ARCTIC FOX
 
+<p>
+  <a href="README-GUI.md"><img src="https://img.shields.io/badge/OPEN_GUI_README-CLICK_HERE-blue?style=for-the-badge&logo=github" alt="Open GUI README" /></a>
+</p>
+
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=800&size=27&pause=1000&color=FF3333&center=true&vCenter=true&width=650&lines=ARCTIC+FOX;GITHUB+SEARCH+TOOL;EXPLORE+GITHUB+PROFILES;DISCOVER+PUBLIC+REPOSITORIES" alt="Arctic Fox Animated Heading" />
 
 ### GitHub Account & Repository Inspector
@@ -10,7 +14,6 @@
   <img src="https://img.shields.io/badge/VERSION-3.0-red?style=for-the-badge" />
   <img src="https://img.shields.io/badge/PLATFORM-KALI%20LINUX-blue?style=for-the-badge&logo=kalilinux" />
   <img src="https://img.shields.io/badge/BUILT%20WITH-PYTHON-yellow?style=for-the-badge&logo=python" />
-  <a href="README-GUI.md"><img src="https://img.shields.io/badge/GUI-README-blue?style=for-the-badge&logo=github" alt="GUI README" /></a>
 </p>
 
 <p>
