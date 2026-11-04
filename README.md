@@ -130,7 +130,7 @@ git clone https://github.com/arcticfox-cyber/Arctic-Fox-GitHub-Search-v3.0.git
 ### Step 2 — Enter the Project Directory
 
 ```bash
-cd Arctic-Fox-GitHub-Search-v3.0
+cd Arctic-Fox-GitHub-Search-v3.0/Arctic-Fox-GitHub-Search-v3.0
 ```
 
 ### Step 3 — Install Requirements
