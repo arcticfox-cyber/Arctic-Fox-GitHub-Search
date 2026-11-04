@@ -10,6 +10,7 @@
   <img src="https://img.shields.io/badge/VERSION-3.0-red?style=for-the-badge" />
   <img src="https://img.shields.io/badge/PLATFORM-KALI%20LINUX-blue?style=for-the-badge&logo=kalilinux" />
   <img src="https://img.shields.io/badge/BUILT%20WITH-PYTHON-yellow?style=for-the-badge&logo=python" />
+  <a href="README-GUI.md"><img src="https://img.shields.io/badge/GUI-README-blue?style=for-the-badge&logo=github" alt="GUI README" /></a>
 </p>
 
 <p>
