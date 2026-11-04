@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:050505,50:8B0000,100:FF3333&height=220&section=header&text=ARCTIC%20FOX%20GUI&fontSize=48&fontColor=ffffff&fontAlignY=38&animation=fadeIn&desc=GITHUB%20PROFILE%20%26%20REPOSITORY%20EXPLORER&descAlignY=60&descSize=16" width="100%" alt="Animated Arctic Fox GUI banner" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:050505,100:8B0000&height=220&section=header&text=ARCTIC%20FOX%20GUI&fontSize=48&fontColor=ffffff&fontAlignY=38&animation=twinklingStars&desc=GITHUB%20PROFILE%20AND%20REPOSITORY%20EXPLORER&descAlignY=60&descSize=16" width="100%" alt="Animated Arctic Fox GUI banner" />
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&pause=900&color=FF3333&center=true&vCenter=true&width=700&lines=EXPLORE+GITHUB+PROFILES;DISCOVER+PUBLIC+REPOSITORIES;INSPECT+PROJECT+INFORMATION;ARCTIC+FOX+GUI+EDITION" alt="Animated typing introduction" />
 
