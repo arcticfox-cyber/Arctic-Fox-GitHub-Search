@@ -36,6 +36,17 @@ Arctic Fox uses the official GitHub REST API to retrieve publicly available info
 
 Designed for Kali Linux, Linux users, developers and cybersecurity enthusiasts.
 
+## 🖥️ GUI Edition Guide
+
+Want to use the graphical interface instead of the terminal version?
+
+- **[Open the GUI README](README-GUI.md)** — setup, launch instructions, installation, troubleshooting and GUI-specific fixes.
+- **[View the GUI README on GitHub](https://github.com/arcticfox-cyber/Arctic-Fox-GitHub-Search-v3.0/blob/main/README-GUI.md)**
+
+The main README below continues to document the terminal edition. The separate GUI guide is attached here so both guides are easy to find from the repository's main page.
+
+---
+
 ## ✨ Features
 
 | Feature | Description |
