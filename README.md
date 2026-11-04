@@ -170,7 +170,7 @@ af
 ```bash
 git clone https://github.com/arcticfox-cyber/Arctic-Fox-GitHub-Search-v3.0.git
 
-cd Arctic-Fox-GitHub-Search-v3.0
+cd Arctic-Fox-GitHub-Search-v3.0/Arctic-Fox-GitHub-Search-v3.0
 
 sudo apt update
 
