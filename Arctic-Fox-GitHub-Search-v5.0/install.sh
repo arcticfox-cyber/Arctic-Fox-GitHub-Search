@@ -16,7 +16,7 @@ fi
 
 APP="arctic-fox"
 APP_TITLE="Arctic Fox"
-VERSION="5.0"
+VERSION="5.0.3"
 OPT_DIR="/opt/arctic-fox"
 BIN_AF="/usr/local/bin/af"
 BIN_FULL="/usr/local/bin/arcticfox"
@@ -135,18 +135,28 @@ $SUDO mkdir -p "$OPT_DIR/assets"
 $SUDO install -m 644 "$SRC/arcticfox_core.py" "$OPT_DIR/"
 $SUDO install -m 644 "$SRC/arcticfox_gui.py"  "$OPT_DIR/"
 $SUDO install -m 755 "$SRC/arcticfox-cli.py"  "$OPT_DIR/"
-[ -f "$SRC/assets/arcticfox-icon.png" ] && \
-    $SUDO install -m 644 "$SRC/assets/arcticfox-icon.png" "$OPT_DIR/assets/"
-ok "application files installed"
+# Install every runtime image asset. The GIF is required for the 3-second startup splash.
+for asset in arcticfox-icon.png moonlit-fox-splash.gif moonlit-fox-splash.png; do
+    if [ -f "$SRC/assets/$asset" ]; then
+        $SUDO install -m 644 "$SRC/assets/$asset" "$OPT_DIR/assets/"
+    elif [ "$asset" = "moonlit-fox-splash.gif" ]; then
+        warn "missing $asset — startup splash artwork will not be available"
+    fi
+done
+ok "application files and available assets installed"
 
 # ----------------------------------------------------------------- commands --
 step "Creating the 'af' command"
 $SUDO tee "$BIN_AF" >/dev/null <<'EOF'
 #!/bin/sh
-# Arctic Fox v5.0 — launcher (GUI with automatic checks)
+# Arctic Fox v5.0.3 — launcher (GUI with automatic checks)
 if ! command -v python3 >/dev/null 2>&1; then
     echo "[x] python3 missing — fix: sudo apt install -y python3 python3-tk"
     exit 1
+fi
+if [ "${1:-}" = "--cli" ]; then
+    shift
+    exec python3 /opt/arctic-fox/arcticfox-cli.py "$@"
 fi
 if [ "${1:-}" != "--cli" ]; then
     if ! python3 -c "import tkinter" 2>/dev/null; then
@@ -175,7 +185,7 @@ Type=Application
 Version=1.0
 Name=Arctic Fox
 GenericName=GitHub Inspector
-Comment=GitHub Account & Repository Inspector — Arctic Fox v5.0
+Comment=GitHub Account & Repository Inspector — Arctic Fox v5.0.3
 Exec=/usr/local/bin/af
 Icon=arcticfox
 Terminal=false
