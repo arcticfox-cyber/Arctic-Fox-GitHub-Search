@@ -17,17 +17,19 @@ ok()   { printf " ${GREEN}[+]${R} %s\n" "$1"; }
 bad()  { printf " ${RED}[x]${R} %s\n" "$1"; }
 warn() { printf " ${YELL}[!]${R} %s\n" "$1"; }
 
-printf "%b\n" " ${B}${CYAN}ARCTIC FOX v5.0 — quick launcher${R}"
-
-# help/version pass straight through — no checks needed
-case "${1:-}" in
-    -h|--help|-v|--version)
-        exec python3 arcticfox_gui.py "$1"
-        ;;
-esac
+printf "%b\n" " ${B}${CYAN}ARCTIC FOX v5.0.3 — quick launcher${R}"
 
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")" && pwd)"
 cd "$HERE"
+
+# Help/version work from any current directory after resolving the script path.
+case "${1:-}" in
+    -h|--help|-v|--version)
+        command -v python3 >/dev/null 2>&1 || { bad "python3 is not installed"; exit 1; }
+        exec python3 "$HERE/arcticfox_gui.py" "$1"
+        ;;
+esac
+
 
 # --- 0. right folder? -------------------------------------------------------
 for f in arcticfox_gui.py arcticfox_core.py; do
@@ -56,6 +58,12 @@ else
     fi
 fi
 
+# CLI mode must not depend on Tkinter or an X display.
+if [ "${1:-}" = "--cli" ]; then
+    shift
+    exec "$PY" "$HERE/arcticfox-cli.py" "$@"
+fi
+
 # --- 2. tkinter? (needed for the GUI only) ----------------------------------
 GUI_OK=1
 if ! $PY -c "import tkinter" 2>/dev/null; then
@@ -67,7 +75,7 @@ if ! $PY -c "import tkinter" 2>/dev/null; then
         if command -v sudo >/dev/null 2>&1; then
             printf "     Install python3-tk now? [Y/n] "
             read -r ans
-            case "$ans" in n*|N*) printf "     Falling back to terminal mode.\n"; exec $PY arcticfox-cli.py "$@" ;; esac
+            case "$ans" in n*|N*) printf "     Falling back to terminal mode.\n"; exec "$PY" "$HERE/arcticfox-cli.py" "$@" ;; esac
             if sudo apt-get install -y python3-tk; then
                 GUI_OK=1; ok "python3-tk installed"
             fi
@@ -91,4 +99,4 @@ if [ "$GUI_OK" -eq 1 ] && [ "${1:-}" != "--cli" ]; then
 fi
 
 # --- 4. launch ---------------------------------------------------------------
-exec $PY arcticfox_gui.py "$@"
+exec "$PY" "$HERE/arcticfox_gui.py" "$@"
