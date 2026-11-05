@@ -1,230 +1,319 @@
 <div align="center">
 
-# ❄️ ARCTIC FOX — GitHub Search v5.0
+# 🦊 ARCTIC FOX — GitHub Search v5.0.3
 
-**GitHub Account & Repository Inspector — Desktop GUI Edition for Kali Linux**
+**GitHub Account & Repository Inspector · Desktop GUI for Kali Linux**
 
-<img src="docs/screenshot-main.png" alt="Arctic Fox v5.0 — main window" width="900" />
+<img src="docs/screenshot-main.png" alt="Arctic Fox main window" width="900" />
 
 <p>
-  <img src="https://img.shields.io/badge/version-5.0-blue?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/platform-Kali%20Linux-blue?style=for-the-badge&logo=kalilinux" />
-  <img src="https://img.shields.io/badge/UI-Desktop%20GUI-informational?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/python-3-success?style=for-the-badge&logo=python" />
+  <img src="https://img.shields.io/badge/version-5.0.3-8296FF?style=for-the-badge" alt="Version 5.0.3" />
+  <img src="https://img.shields.io/badge/platform-Kali%20Linux-6C63FF?style=for-the-badge&logo=kalilinux&logoColor=white" alt="Kali Linux" />
+  <img src="https://img.shields.io/badge/interface-Tkinter%20GUI-8B7BFF?style=for-the-badge" alt="Tkinter GUI" />
+  <img src="https://img.shields.io/badge/license-Proprietary-343A66?style=for-the-badge" alt="Proprietary license" />
 </p>
 
-**Search** · **Inspect** · **Clone** · **Report** — with one command install.
+**Search · Inspect · Clone · Export**
+
+[Repository](https://github.com/arcticfox-cyber/Arctic-Fox-GitHub-Search) · [Issues](https://github.com/arcticfox-cyber/Arctic-Fox-GitHub-Search/issues)
 
 </div>
 
 ---
 
-## What is Arctic Fox?
+## Overview
 
-Arctic Fox is a desktop tool for exploring GitHub accounts and public repositories.
-Type a username and get the full public profile, every repository with stars, forks,
-languages and topics, public gists, recent activity, organizations — then clone a repo,
-open it in the browser, or export a report.
+Arctic Fox is a Python desktop application for searching GitHub users and exploring their publicly available profile and repository information. Search by username, full name, or email; inspect repositories, gists and recent public activity; clone repositories; and export reports.
 
-**v5.0 "Frost Pro" is a complete visual upgrade:** a professional Arctic Night
-interface with a real fox logo header, living aurora light strip, smooth 30 fps
-animation everywhere and glass cards — still 100% Python standard library.
-
-## What's new in v5.0 — Frost Pro UI
-
-| | |
-|---|---|
-| 🦊 **Real logo header** | The ASCII-art banner is gone — the actual Arctic Fox logo with a soft halo, wordmark and a living aurora light strip that flows across the header |
-| 🎬 **Smooth animation everywhere** | 30 fps tween engine: buttons fade on hover, the search field glows on focus, the tab underline slides, dialogs and toasts ease in — nothing snaps |
-| 🌌 **Arctic Night theme** | Deeper, glassier dark palette with a refined accent system (ice · indigo · gold) and proper typography hierarchy |
-| 🔘 **Segmented search modes** | Username / Full name / Email as an animated pill selector instead of a dropdown |
-| 📊 **Count-up stat tiles** | Stats animate from 0 to value with easing when a profile loads |
-| 💀 **Skeleton loading** | The profile card pulses with skeleton placeholders while data is being fetched |
-| 🔔 **Toast notifications** | Reports, clones and errors now arrive as glass toasts sliding up from the corner — no more blocking popups |
-| 🖱️ **Hover-highlight tables** | Rows light up under the mouse, taller rows, thin styled scrollbars |
-| 🪟 **Centered modal dialogs** | Settings, repo details and user results are centered, modal, Escape-closable |
-| ⌨️ **Shortcuts** | `Ctrl+F` / `Ctrl+K` focus search · `Ctrl+A` select text · `Ctrl+L` clear · `Enter` search · double-click a gist to open it |
-
-## v5.0.1 stability fixes
-
-- Main window is displayed immediately (removed the broken transparent startup tween).
-- Window size is fitted and centred for the available desktop resolution.
-- The animation loop starts only after the UI has been built and shown.
-- The no-display launcher fallback now forwards CLI arguments correctly.
-
-## v5.0.2 visual and avatar update
-
-- Shows the supplied Moonlit Fox wallpaper for 3 seconds at launch, then opens the GUI.
-- Refreshed the interface palette to a moonlit blue/violet theme.
-- GitHub profile avatars now decode PNG, JPEG, and WebP when Pillow is installed; otherwise Tk's built-in PNG/GIF support is used.
-- Requests GitHub avatar images with an image-friendly Accept header.
+The v5.0.3 interface uses a midnight blue and violet visual theme. At startup, the included Moonlit Fox artwork is shown for approximately **3 seconds**, followed by the main GUI.
 
 ## Features
 
-| Feature | Description |
+| Feature | What it does |
 |---|---|
-| 🔍 Username lookup | Full public profile of any GitHub account |
-| 👥 User search | Search by username, full name or email |
-| 📦 Repository explorer | Sortable list of public repos with stars, forks, language, topics |
-| 📊 Stats bar | Live totals for repos / stars / forks / top language / followers |
-| ℹ️ Repo details | Full details dialog — license, size, issues, topics, homepage |
-| ⤓ Clone | Shallow `git clone` with live progress in the status bar |
-| ↗ Browser | Open profiles and repos on GitHub |
-| 📄 Reports | Detailed `.txt` report and structured `.json` export |
-| 📚 Gists & activity | Public gists and recent public events in their own tabs |
-| 🏢 Organizations | Associated organizations shown on the profile card |
-| ⚙️ Settings | GitHub API token + clone directory |
-| 🎨 Arctic Night theme | Dark glassy UI with aurora accent lighting |
+| User search | Search by GitHub username, full name, or email |
+| Profile inspector | View public profile details, avatar, followers, and organizations |
+| Repository explorer | Browse repositories with stars, forks, language, topics, and update dates |
+| Repository details | Inspect license, size, issues, topics, and homepage where supplied by GitHub |
+| Clone | Shallow-clone a selected public repository |
+| Browser | Open a GitHub profile, gist, or repository in the browser |
+| Gists and activity | Browse public gists and recent public events |
+| Reports | Save human-readable TXT reports and structured JSON exports |
+| Settings | Configure an optional GitHub token and clone directory |
+| GUI | Dark Arctic Night / moonlit blue-violet theme |
+| Startup splash | Display the included Moonlit Fox GIF for around 3 seconds |
+
+Screenshots:
 
 <div align="center">
 
-| Repo details | Settings |
+| Repository details | Settings |
 |---|---|
-| <img src="docs/screenshot-details.png" width="420" /> | <img src="docs/screenshot-settings.png" width="420" /> |
+| <img src="docs/screenshot-details.png" alt="Repository details window" width="420" /> | <img src="docs/screenshot-settings.png" alt="Settings window" width="420" /> |
 
 </div>
 
 ## Requirements
 
-- **Kali Linux** (installer is Kali-specific; `--force` works on Debian/Ubuntu)
-- Python 3 with Tkinter (`python3-tk`) — installed automatically
-- Git — installed automatically
+- Kali Linux or a compatible Debian-based Linux distribution with a desktop session
+- Python 3
+- Tkinter for the graphical interface
+- Git for repository cloning
 - Internet connection
+- Pillow is optional; it improves compatibility with JPEG/WebP avatars and image scaling
 
-## Installation (one command)
+Install the system dependencies:
 
-```bash
-git clone https://github.com/arcticfox-cyber/Arctic-Fox-GitHub-Search-v5.0.git
-cd Arctic-Fox-GitHub-Search-v5.0
+~~~bash
+sudo apt update
+sudo apt install -y python3 python3-tk git xdg-utils
+~~~
+
+Optional Pillow support:
+
+~~~bash
+python3 -m pip install --user Pillow
+~~~
+
+## Installation
+
+### 1. Clone this repository
+
+~~~bash
+git clone https://github.com/arcticfox-cyber/Arctic-Fox-GitHub-Search.git
+~~~
+
+### 2. Enter the application directory
+
+~~~bash
+cd Arctic-Fox-GitHub-Search/Arctic-Fox-GitHub-Search-v5.0
+~~~
+
+### 3. Install Arctic Fox
+
+~~~bash
 sudo bash install.sh
-```
+~~~
 
-The installer will:
+The installer checks for Kali Linux, installs missing system dependencies, copies the application and its runtime image assets to **/opt/arctic-fox**, creates the **af** and **arcticfox** commands, and adds an Applications menu entry.
 
-1. Detect Kali Linux
-2. Install `python3`, `python3-tk`, `git`, `xdg-utils` if missing
-3. Copy the app to `/opt/arctic-fox`
-4. Create the **`af`** command (`arcticfox` works too)
-5. Add **Arctic Fox** to your Applications menu
+For another Debian-based distribution, use the explicit override:
 
-### No installation — just run it
+~~~bash
+sudo bash install.sh --force
+~~~
 
-Extracted the ZIP but don't want to install anything yet?
+### Quick launch without installing
 
-```bash
+From the application directory:
+
+~~~bash
 bash run.sh
-```
+~~~
 
-`run.sh` checks python3, tkinter and your display, offers to install what's
-missing, and falls back to terminal mode automatically.
+The launcher checks Python, Tkinter, and the display environment. The splash GIF must remain in the assets directory beside the application source.
 
-### One-liner (no clone)
+### Remote one-line installer
 
-```bash
-curl -sSL https://raw.githubusercontent.com/arcticfox-cyber/Arctic-Fox-GitHub-Search-v5.0/main/remote-install.sh | sudo bash
-```
+~~~bash
+curl -fsSL https://raw.githubusercontent.com/arcticfox-cyber/Arctic-Fox-GitHub-Search/main/Arctic-Fox-GitHub-Search-v5.0/remote-install.sh | sudo bash
+~~~
 
-> The one-liner only works **after the project is on GitHub**. Downloaded the ZIP
-> manually? Use `sudo bash install.sh` instead — same result.
+Only run installation scripts from a source you trust. To review the script first, open the remote-install.sh file in this repository before executing it.
 
-### Something not working?
+## Commands
 
-Run the built-in doctor — it finds the problem and prints the exact fix:
+After installation:
 
-```bash
-bash doctor.sh
-```
+| Command | Action |
+|---|---|
+| **af** | Start the GUI |
+| **af octocat** | Open the GUI and search for a username |
+| **af --cli** | Start the terminal edition |
+| **af --cli octocat** | Search a username in terminal mode |
+| **af --help** | Show GUI usage information |
+| **af --version** | Show the application version |
+| **sudo bash install.sh --uninstall** | Remove the installed application |
 
-### Uninstall
+Without installing, from the application directory:
 
-```bash
-sudo bash install.sh --uninstall
-```
+~~~bash
+bash run.sh
+bash run.sh octocat
+bash run.sh --cli
+python3 arcticfox-cli.py
+python3 arcticfox-cli.py octocat
+python3 arcticfox_gui.py --help
+python3 arcticfox_gui.py --version
+~~~
 
-Config and saved reports are kept on uninstall.
+The GUI requires a working Linux desktop display. The terminal edition can be used over SSH or on headless systems.
 
-## Usage
+## Using the GUI
 
-```bash
-af                # start the GUI
-af octocat        # open the GUI and search a username directly
-af --cli          # classic terminal edition
-af --cli octocat  # terminal edition, direct search
-af --help
-bash run.sh       # same as 'af' — but works from the extracted folder, no install
-```
-
-### In the GUI
-
-1. **Search** — pick a mode (`Username`, `Full Name`, `Email`), type, hit **Enter** or **SEARCH**
-2. **Profile card** — avatar, bio, location, company, links, orgs
-3. **Repositories tab** — click a row, then `▼ CLONE`, `Details` or `Open on GitHub` (double-click = details)
-4. **Gists / Activity tabs** — public gists and recent events
-5. **Stats bar** — live totals update after every search
-6. **Save Report (.txt)** / **Export Data (.json)** — written to `~/arctic-fox-reports/`
-7. **SETTINGS** — GitHub token and clone directory
+1. Choose **Username**, **Full Name**, or **Email** search mode.
+2. Enter the search term and press Enter or click **SEARCH**.
+3. Review the profile card, avatar, account details, and statistics.
+4. Open the **Repositories**, **Gists**, or **Activity** tabs.
+5. Select a repository to view details, clone it, or open it on GitHub.
+6. Use **Save Report** for a TXT report or **Export Data** for JSON.
+7. Open **Settings** to configure a token or clone directory.
 
 ## GitHub API token (optional)
 
-Without a token GitHub allows limited API requests (60/hour). Add a token and the
-limit rises to 5,000/hour — search also becomes far more generous.
+Arctic Fox can query public GitHub information without a token, subject to GitHub's unauthenticated rate limits. An optional personal access token can provide a higher API rate limit.
 
-1. Generate a token at <https://github.com/settings/tokens> (classic, no scope needed for public data)
-2. Open **SETTINGS** in Arctic Fox, paste the token, **SAVE**
+1. Create a token in [GitHub Settings](https://github.com/settings/tokens).
+2. Open **Settings** in Arctic Fox.
+3. Paste the token and select **Save**.
 
-The token is stored locally in `~/.config/arctic-fox/config.json` with `600` permissions.
-Never share it with anyone.
+The application stores its configuration at:
 
-## Reports
+**~/.config/arctic-fox/config.json**
 
-```
-~/arctic-fox-reports/
-├── octocat-20260101-120000.txt    # human-readable report
-└── octocat-20260101-120000.json   # structured data export
-```
+The configuration file is written with owner-only permissions (0600). Never share your token or commit it to this repository.
+
+## Reports and configuration
+
+Reports are saved in:
+
+**~/arctic-fox-reports/**
+
+The configuration file is saved in:
+
+**~/.config/arctic-fox/config.json**
+
+The clone directory defaults to:
+
+**~/github/**
 
 ## Project structure
 
-```
+~~~text
 Arctic-Fox-GitHub-Search-v5.0/
-├── arcticfox_gui.py       # GUI edition (main app)
-├── arcticfox-cli.py       # terminal edition (af --cli)
-├── arcticfox_core.py      # shared GitHub API layer
-├── install.sh             # one-command Kali installer
-├── run.sh                 # quick launcher — no install needed
-├── doctor.sh              # self-diagnosis (run this when errors appear)
-├── remote-install.sh      # curl | bash one-liner
-├── assets/arcticfox-icon.png
-├── docs/                  # screenshots
-└── README.md
-```
+├── arcticfox_gui.py
+├── arcticfox-cli.py
+├── arcticfox_core.py
+├── install.sh
+├── run.sh
+├── remote-install.sh
+├── doctor.sh
+├── LICENSE
+├── README.md
+├── assets/
+│   ├── arcticfox-icon.png
+│   ├── moonlit-fox-splash.gif
+│   └── moonlit-fox-splash.png
+└── docs/
+    ├── screenshot-main.png
+    ├── screenshot-details.png
+    └── screenshot-settings.png
+~~~
 
 ## Troubleshooting
 
-**Step 1 — always:** `bash doctor.sh` (from the project folder). It pinpoints
-the problem and prints the fix. Common errors:
+### GUI does not open
 
-| Error message | Meaning & fix |
-|---|---|
-| `ModuleNotFoundError: No module named 'tkinter'` | GUI toolkit missing → `sudo apt install -y python3-tk` (or just run `bash run.sh`, it offers to install it) |
-| `_tkinter.TclError: no display name and no $DISPLAY` | You are on SSH / headless / Termux — the GUI needs a desktop. Use terminal mode: `af --cli` |
-| `SyntaxError` on start with `python` | You used Python 2 — always run with **python3** (or `bash run.sh`) |
-| `curl: (22) The requested URL returned error: 404` from the one-liner | Project not uploaded under that repo name yet → extract the ZIP and run `sudo bash install.sh` locally |
-| `apt-get update failed` | Check internet / VPN / proxy; retry `sudo apt update` then the installer again |
-| `af: command not found` after install | Open a **new** terminal — `/usr/local/bin` must be in `$PATH` |
-| Rate limit reached (403) | Add a token in **SETTINGS** (60 → 5,000 req/h) |
-| "No such account found (404)" | Check the spelling — the account does not exist |
-| Clone fails | Check internet; git must be installed: `sudo apt install -y git` |
-| Termux / NetHunter-rootless | No desktop GUI possible there — use `python3 arcticfox-cli.py` |
+~~~bash
+sudo apt update
+sudo apt install -y python3 python3-tk
+bash doctor.sh
+~~~
 
-## Responsible use
+Run from the application directory to see startup errors:
 
-Arctic Fox only reads **public** GitHub data through the official GitHub REST API.
-Use it for education, research and legitimate OSINT work. Respect GitHub's Terms of
-Service, API rate limits and user privacy.
+~~~bash
+python3 arcticfox_gui.py
+~~~
 
-## Credits & license
+### Splash image is missing
 
-Built by **[@arcticfox-cyber](https://github.com/arcticfox-cyber)** · v5.0 Frost Pro UI · MIT License — see [LICENSE](LICENSE).
+Confirm the following file exists:
 
-If this tool is useful to you, leave a ⭐ on the repository. **Stay frosty.** ❄️🦊
+**assets/moonlit-fox-splash.gif**
+
+If running the installed application, confirm the installer copied it to:
+
+**/opt/arctic-fox/assets/moonlit-fox-splash.gif**
+
+Reinstall from the project directory after updating:
+
+~~~bash
+sudo bash install.sh
+~~~
+
+### GitHub avatar does not display
+
+Check your internet connection. For broader image-format support, install Pillow:
+
+~~~bash
+python3 -m pip install --user Pillow
+~~~
+
+### GitHub rate limit reached
+
+Wait for the rate limit to reset or configure a personal access token in Settings. Do not paste tokens into issues, screenshots, or public messages.
+
+### No display / SSH / headless system
+
+The GUI needs a desktop session. Use terminal mode instead:
+
+~~~bash
+python3 arcticfox-cli.py
+~~~
+
+### Launcher command not found
+
+Open a new terminal after installation and check that **/usr/local/bin** is in your PATH. You can also run the application directly with:
+
+~~~bash
+bash run.sh
+~~~
+
+## Security and responsible use
+
+Arctic Fox uses the official GitHub REST API to retrieve information made publicly available by GitHub. It does not bypass private repository permissions. Respect GitHub's Terms of Service, API limits, and user privacy. Keep access tokens private.
+
+## Version history
+
+### v5.0.3
+
+- Updated the moonlit splash startup flow and native GIF loading.
+- Improved launcher handling for CLI mode and paths.
+- Installer now copies the splash GIF and other runtime artwork into the installed assets directory.
+- Corrected the remote installer to use this repository and its nested application directory.
+- Updated the application version and repository URL.
+
+### v5.0.2
+
+- Added the Moonlit Fox splash artwork and blue-violet interface palette.
+- Improved avatar image handling.
+
+### v5.0.1
+
+- Improved startup visibility and screen-size handling.
+- Fixed the CLI fallback argument forwarding.
+
+## License
+
+**Arctic Fox is proprietary software.** All rights are reserved by the copyright holder. Viewing the source and personal evaluation are permitted. Copying, modifying, redistributing, sublicensing, or creating derivative works requires prior written permission.
+
+See the [Proprietary License](LICENSE) in this directory. This project is **not** distributed under the MIT License.
+
+## Support
+
+Found a bug? Open an [issue](https://github.com/arcticfox-cyber/Arctic-Fox-GitHub-Search/issues) and include your Linux distribution, Python version, launch command, and relevant error output. Remove tokens and other secrets before sharing logs.
+
+---
+
+<div align="center">
+
+**🦊 ARCTIC FOX**
+
+*Explore · Discover · Inspect*
+
+Developed by [@arcticfox-cyber](https://github.com/arcticfox-cyber)
+
+**Stay Frosty.**
+
+</div>
