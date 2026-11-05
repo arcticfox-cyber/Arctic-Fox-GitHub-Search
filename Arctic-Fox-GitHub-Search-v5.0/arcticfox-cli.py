@@ -7,7 +7,7 @@ import urllib.error, urllib.parse, urllib.request
 from datetime import datetime
 from pathlib import Path
 
-VERSION = "5.0"
+VERSION = "5.0.3"
 CONF_DIR = Path(os.environ.get("XDG_CONFIG_HOME") or (Path.home() / ".config")) / "arctic-fox"
 CONF_FILE = CONF_DIR / "config.json"
 REPORT_DIR = Path.home() / "arctic-fox-reports"
