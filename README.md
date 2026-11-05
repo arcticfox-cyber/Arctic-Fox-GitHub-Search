@@ -446,15 +446,11 @@ Always respect GitHub's Terms of Service, API usage limits and user privacy.
 
 Use this tool responsibly and only for legitimate purposes.
 
-## 🤝 Contributing
+## 🔐 Licensing & Contributions
 
-Contributions and improvements are welcome!
+This project is proprietary. Viewing and personal evaluation are permitted; copying, modifying, redistributing, or submitting derivative versions requires prior written permission. Unsolicited code contributions and pull requests are not accepted.
 
-1. Fork this repository.
-2. Create a new branch.
-3. Make your changes.
-4. Test your code.
-5. Submit a Pull Request.
+See [LICENSE](LICENSE) and [BRAND-AND-ARTWORK.md](BRAND-AND-ARTWORK.md) for the applicable terms.
 
 ## 🐛 Bug Reports
 
