@@ -16,10 +16,10 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
-VERSION = "5.0"
+VERSION = "5.0.3"
 APP_NAME = "Arctic Fox"
 TAGLINE = "GitHub Account & Repository Inspector"
-REPO_URL = "https://github.com/arcticfox-cyber/Arctic-Fox-GitHub-Search-v5.0"
+REPO_URL = "https://github.com/arcticfox-cyber/Arctic-Fox-GitHub-Search"
 
 CONF_DIR = Path(os.environ.get("XDG_CONFIG_HOME") or (Path.home() / ".config")) / "arctic-fox"
 CONF_FILE = CONF_DIR / "config.json"
