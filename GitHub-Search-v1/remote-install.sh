@@ -10,7 +10,7 @@
 # =============================================================================
 set -eu
 
-REPO="arcticfox-cyber/Arctic-Fox-GitHub-Search"
+REPO="arcticfox-cyber/GitHub-Search"
 BRANCH="main"
 
 command -v curl >/dev/null 2>&1 || { echo "[x] curl is required: sudo apt install curl"; exit 1; }
@@ -36,11 +36,10 @@ fi
 
 tar xzf "$TMP/repo.tar.gz" -C "$TMP"
 
-ROOT_DIR="$(find "$TMP" -maxdepth 1 -type d \( -name 'GitHub-Search-*' -o -name 'Arctic-Fox-GitHub-Search-*' \) | head -n1)"
+ROOT_DIR="$(find "$TMP" -maxdepth 1 -type d \( -name 'GitHub-Search-*'  \) | head -n1)"
 [ -n "$ROOT_DIR" ] || { echo "[x] download failed (unexpected archive layout)"; exit 1; }
 
 DIR="$ROOT_DIR/GitHub-Search-v1"
-[ -d "$DIR" ] || DIR="$ROOT_DIR/Arctic-Fox-GitHub-Search-v1"
 [ -f "$DIR/install.sh" ] || {
     echo "[x] installer not found in expected project folder: $DIR"
     exit 1
