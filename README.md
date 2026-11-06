@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌙 GITHUB SEARCH v1.0
+# GITHUB SEARCH v1.0
 
 **GitHub Account & Repository Inspector · Desktop GUI for Kali Linux**
 
