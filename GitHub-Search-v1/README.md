@@ -15,7 +15,7 @@
 
 **Search · Inspect · Clone · Export**
 
-[Repository](https://github.com/arcticfox-cyber/Arctic-Fox-GitHub-Search) · [Issues](https://github.com/arcticfox-cyber/Arctic-Fox-GitHub-Search/issues)
+[Repository](https://github.com/arcticfox-cyber/GitHub-Search) · [Issues](https://github.com/arcticfox-cyber/GitHub-Search/issues)
 
 </div>
 
@@ -80,7 +80,7 @@ python3 -m pip install --user Pillow
 ### 1. Clone this repository
 
 ~~~bash
-git clone https://github.com/arcticfox-cyber/Arctic-Fox-GitHub-Search.git
+git clone https://github.com/arcticfox-cyber/GitHub-Search.git
 ~~~
 
 ### 2. Enter the application directory
@@ -116,7 +116,7 @@ The launcher checks Python, Tkinter, and the display environment. The splash PNG
 ### Remote one-line installer
 
 ~~~bash
-curl -fsSL https://raw.githubusercontent.com/arcticfox-cyber/Arctic-Fox-GitHub-Search/main/GitHub-Search-v1/remote-install.sh | sudo bash
+curl -fsSL https://raw.githubusercontent.com/arcticfox-cyber/GitHub-Search/main/GitHub-Search-v1/remote-install.sh | sudo bash
 ~~~
 
 Only run installation scripts from a source you trust. To review the script first, open the remote-install.sh file in this repository before executing it.
@@ -202,6 +202,8 @@ GitHub-Search-v1/
 ├── README.md
 ├── assets/
 │   ├── arcticfox-icon.png
+│   ├── icon-v1.png
+│   ├── logo-v1.png
 │   ├── moonlit-fox-splash.png
 │   └── moonlit-fox-splash.gif
 └── docs/
@@ -314,7 +316,7 @@ See the [Proprietary License](LICENSE) in this directory. This project is **not*
 
 ## Support
 
-Found a bug? Open an [issue](https://github.com/arcticfox-cyber/Arctic-Fox-GitHub-Search/issues) and include your Linux distribution, Python version, launch command, and relevant error output. Remove tokens and other secrets before sharing logs.
+Found a bug? Open an [issue](https://github.com/arcticfox-cyber/GitHub-Search/issues) and include your Linux distribution, Python version, launch command, and relevant error output. Remove tokens and other secrets before sharing logs.
 
 ---
 
