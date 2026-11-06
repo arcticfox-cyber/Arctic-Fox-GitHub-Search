@@ -312,7 +312,7 @@ GitHub Search uses the official GitHub REST API to retrieve information made pub
 
 **GitHub Search is proprietary software.** All rights are reserved by the copyright holder. Viewing the source and personal evaluation are permitted. Copying, modifying, redistributing, sublicensing, or creating derivative works requires prior written permission.
 
-See the [Proprietary License](LICENSE) in this directory. This project is **not** distributed under the MIT License.
+See the [Proprietary License](../LICENSE) in this directory. This project is **not** distributed under the MIT License.
 
 ## Support
 
