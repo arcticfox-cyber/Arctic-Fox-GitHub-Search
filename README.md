@@ -1,10 +1,10 @@
 <div align="center">
 
-# 🦊 GITHUB SEARCH v1.0
+# 🌙 GITHUB SEARCH v1.0
 
 **GitHub Account & Repository Inspector · Desktop GUI for Kali Linux**
 
-<img src="docs/screenshot-main.png" alt="GitHub Search main window" width="900" />
+<img src="GitHub-Search-v1/docs/screenshot-main.png" alt="GitHub Search main window" width="900" />
 
 <p>
   <img src="https://img.shields.io/badge/version-1.0-3DDCFF?style=for-the-badge" alt="Version 1.0" />
@@ -15,7 +15,7 @@
 
 **Search · Inspect · Clone · Export**
 
-[Repository](https://github.com/arcticfox-cyber/GitHub-Search) · [Issues](https://github.com/arcticfox-cyber/GitHub-Search/issues) · [License](LICENSE)
+[Repository](https://github.com/arcticfox-cyber/GitHub-Search) · [Issues](https://github.com/arcticfox-cyber/GitHub-Search/issues)
 
 </div>
 
@@ -23,57 +23,53 @@
 
 ## Overview
 
-GitHub Search is a Python desktop application for searching GitHub users and exploring their publicly available profile and repository information. Search by username, full name, or email; inspect repositories, gists and recent public activity; clone public repositories; and export reports.
+GitHub Search is a Python desktop application for searching GitHub users and exploring their publicly available profile and repository information. Search by username, full name, or email; inspect repositories, gists and recent public activity; clone repositories; and export reports.
 
-The v1.0 interface features the **GitHub Dark Pro** theme, animated interface elements, circular profile avatars, and an in-window Moonlit Fox startup splash.
+The v1.0 interface uses the **GitHub Dark Pro** theme — carbon-dark surfaces straight from GitHub's own dark palette, emerald CTA buttons, azure links and violet spark highlights. Every animation runs on one consistent timing scale (120 / 220 / 320 ms) for a professional feel: animated header entrance (brand slides from the left, status pills from the right), smooth tab underline and search-mode knob, color-lerp button hovers. At startup, the app window opens at its normal size and the wallpaper boot screen plays **inside the window** for exactly **3 seconds** (cover-fit scaling, like modern app splash panels) with an animated progress bar. The wallpaper is painted before the window is ever mapped, so the very first frame on screen is the boot screen — no flicker — then it smoothly **melts into the app background** and the GUI appears with a soft brightness settle. The boot stays inside the app window, never fullscreen. Profile avatars render as perfect circles inside a glowing ring, and the app ships a new magnifier-style logo and icon.
 
 ## Features
 
-| Feature | Description |
+| Feature | What it does |
 |---|---|
 | User search | Search by GitHub username, full name, or email |
-| Profile inspector | View public profile information, avatar, followers, and organizations |
-| Repository explorer | Browse repositories, stars, forks, languages, topics, and update dates |
-| Repository details | View repository metadata, license, size, and homepage when available |
-| Clone repositories | Shallow-clone a selected public repository |
+| Profile inspector | View public profile details, avatar, followers, and organizations |
+| Repository explorer | Browse repositories with stars, forks, language, topics, and update dates |
+| Repository details | Inspect license, size, issues, topics, and homepage where supplied by GitHub |
+| Clone | Shallow-clone a selected public repository |
+| Browser | Open a GitHub profile, gist, or repository in the browser |
 | Gists and activity | Browse public gists and recent public events |
-| Reports | Save TXT reports and export structured JSON data |
-| Settings | Save an optional GitHub API token and choose a clone directory |
-| GUI | Dark Pro interface with animated controls and startup splash |
-| Terminal edition | Search and inspect accounts without launching the GUI |
+| Reports | Save human-readable TXT reports and structured JSON exports |
+| Settings | Configure an optional GitHub token and clone directory |
+| GUI | GitHub Dark Pro theme (indigo night · violet moon glow · cyan sparks) |
+| Startup splash | GitHub Dark Pro wallpaper boot screen for 3 seconds with progress bar |
 
-## Screenshots
+Screenshots:
 
 <div align="center">
 
-| Main window | Repository details |
+| Repository details | Settings |
 |---|---|
-| <img src="docs/screenshot-main.png" alt="Main window" width="420" /> | <img src="docs/screenshot-details.png" alt="Repository details" width="420" /> |
-
-**Settings**
-
-<img src="docs/screenshot-settings.png" alt="Settings window" width="600" />
+| <img src="GitHub-Search-v1/docs/screenshot-details.png" alt="Repository details window" width="420" /> | <img src="GitHub-Search-v1/docs/screenshot-settings.png" alt="Settings window" width="420" /> |
 
 </div>
 
 ## Requirements
 
-- Kali Linux (recommended) or a compatible Debian-based Linux distribution
+- Kali Linux or a compatible Debian-based Linux distribution with a desktop session
 - Python 3
 - Tkinter for the graphical interface
-- Git for cloning repositories
+- Git for repository cloning
 - Internet connection
-- A working desktop session for GUI mode
-- Pillow is optional; it improves support for some avatar image formats
+- Pillow is optional; it improves compatibility with JPEG/WebP avatars and image scaling
 
-Install dependencies on Kali Linux:
+Install the system dependencies:
 
 ~~~bash
 sudo apt update
 sudo apt install -y python3 python3-tk git xdg-utils
 ~~~
 
-Optional image support:
+Optional Pillow support:
 
 ~~~bash
 python3 -m pip install --user Pillow
@@ -81,87 +77,49 @@ python3 -m pip install --user Pillow
 
 ## Installation
 
-### 1. Download the project
-
-Clone the repository:
+### 1. Clone this repository
 
 ~~~bash
 git clone https://github.com/arcticfox-cyber/GitHub-Search.git
 ~~~
 
-Or download the repository from GitHub and extract it.
-
-### 2. Open the project folder
+### 2. Enter the application directory
 
 ~~~bash
-cd GitHub-Search
+cd GitHub-Search/GitHub-Search-v1
 ~~~
 
-Make sure the folder contains **install.sh**, **arcticfox_gui.py**, **arcticfox_core.py**, **arcticfox-cli.py**, and the **assets/** directory.
-
-### 3. Run the installer
+### 3. Install GitHub Search
 
 ~~~bash
 sudo bash install.sh
 ~~~
 
-The installer will:
+The installer checks for Kali Linux, installs missing system dependencies, copies the application and its runtime image assets to **/opt/github-search**, creates the **af** and **github-search** commands, and adds an Applications menu entry.
 
-- Check whether the operating system is Kali Linux.
-- Install required packages when needed.
-- Copy the application files and runtime artwork to `/opt/github-search`.
-- Create the `af` and `github-search` terminal commands.
-- Add **GitHub Search** to the desktop Applications menu.
-
-After installation, start the application:
-
-~~~bash
-af
-~~~
-
-### Install on another Debian-based distribution
-
-The installer is designed for Kali Linux. To continue on another Debian-based distribution, use the override only if your system is compatible:
+For another Debian-based distribution, use the explicit override:
 
 ~~~bash
 sudo bash install.sh --force
 ~~~
 
-## Run without installing
+### Quick launch without installing
 
-You can launch the application directly from the extracted project folder. No system-wide installation is required.
-
-Start the GUI:
+From the application directory:
 
 ~~~bash
 bash run.sh
 ~~~
 
-Open the GUI and search for a username:
+The launcher checks Python, Tkinter, and the display environment. The splash PNG must remain in the assets directory beside the application source.
+
+### Remote one-line installer
 
 ~~~bash
-bash run.sh octocat
+curl -fsSL https://raw.githubusercontent.com/arcticfox-cyber/GitHub-Search/main/GitHub-Search-v1/remote-install.sh | sudo bash
 ~~~
 
-Start terminal mode:
-
-~~~bash
-bash run.sh --cli
-~~~
-
-You can also run the Python files directly:
-
-~~~bash
-python3 arcticfox_gui.py
-python3 arcticfox-cli.py
-python3 arcticfox-cli.py octocat
-~~~
-
-**Important:** The GUI requires a Linux desktop display. On SSH, headless systems, or Termux/NetHunter-rootless, use terminal mode:
-
-~~~bash
-python3 arcticfox-cli.py
-~~~
+Only run installation scripts from a source you trust. To review the script first, open the remote-install.sh file in this repository before executing it.
 
 ## Commands
 
@@ -169,119 +127,96 @@ After installation:
 
 | Command | Action |
 |---|---|
-| `af` | Start the desktop GUI |
-| `github-search` | Start the desktop GUI |
-| `af octocat` | Open the GUI and search for a username |
-| `af --cli` | Start the terminal edition |
-| `af --cli octocat` | Search a username in terminal mode |
-| `af --help` | Show help |
-| `bash doctor.sh` | Diagnose common setup and launch problems |
+| **af** | Start the GUI |
+| **af octocat** | Open the GUI and search for a username |
+| **af --cli** | Start the terminal edition |
+| **af --cli octocat** | Search a username in terminal mode |
+| **af --help** | Show GUI usage information |
+| **af --version** | Show the application version |
+| **sudo bash install.sh --uninstall** | Remove the installed application |
 
-Without installation, run commands from the project directory:
-
-| Command | Action |
-|---|---|
-| `bash run.sh` | Start the GUI |
-| `bash run.sh octocat` | Start GUI and search |
-| `bash run.sh --cli` | Start terminal mode |
-| `python3 arcticfox-cli.py` | Start terminal edition directly |
-| `bash doctor.sh` | Run diagnostics |
-
-## Uninstallation
-
-To remove GitHub Search after installing it, open a terminal in the project folder and run:
+Without installing, from the application directory:
 
 ~~~bash
-sudo bash install.sh --uninstall
+bash run.sh
+bash run.sh octocat
+bash run.sh --cli
+python3 arcticfox-cli.py
+python3 arcticfox-cli.py octocat
+python3 arcticfox_gui.py --help
+python3 arcticfox_gui.py --version
 ~~~
 
-The uninstaller removes:
-
-- `/opt/github-search` — installed application files
-- `/usr/local/bin/af` — application launcher
-- `/usr/local/bin/github-search` — command symlink
-- The desktop Applications menu entry
-- The installed application icon
-
-**Your personal data is kept.** The uninstaller intentionally does not delete:
-
-- `~/.config/github-search/` — saved settings and optional GitHub token
-- `~/github-search-reports/` — exported reports
-- Your cloned repositories, normally stored in `~/github/`
-
-If you also want to erase your personal settings and exported reports, remove them manually after uninstalling:
-
-~~~bash
-rm -rf ~/.config/github-search
-rm -rf ~/github-search-reports
-~~~
-
-Only run those two commands if you are sure you no longer need the saved configuration and reports. They do not remove your cloned repositories.
+The GUI requires a working Linux desktop display. The terminal edition can be used over SSH or on headless systems.
 
 ## Using the GUI
 
 1. Choose **Username**, **Full Name**, or **Email** search mode.
-2. Enter a search term and press Enter or click **SEARCH**.
-3. Review the profile card, account details, and statistics.
+2. Enter the search term and press Enter or click **SEARCH**.
+3. Review the profile card, avatar, account details, and statistics.
 4. Open the **Repositories**, **Gists**, or **Activity** tabs.
-5. Select a repository to inspect its details, clone it, or open it on GitHub.
-6. Use **Save Report** to create a TXT report or **Export Data** to save JSON.
-7. Open **Settings** to configure an optional token or change the clone directory.
+5. Select a repository to view details, clone it, or open it on GitHub.
+6. Use **Save Report** for a TXT report or **Export Data** for JSON.
+7. Open **Settings** to configure a token or clone directory.
 
-## Optional GitHub API token
+## GitHub API token (optional)
 
-GitHub Search can access public GitHub information without a token, but unauthenticated requests have a lower rate limit. Adding a personal access token can increase the available API request limit.
+GitHub Search can query public GitHub information without a token, subject to GitHub's unauthenticated rate limits. An optional personal access token can provide a higher API rate limit.
 
-1. Open [GitHub token settings](https://github.com/settings/tokens).
-2. Generate a token suitable for reading public information.
-3. Open **Settings** in GitHub Search.
-4. Paste the token and save it.
+1. Create a token in [GitHub Settings](https://github.com/settings/tokens).
+2. Open **Settings** in GitHub Search.
+3. Paste the token and select **Save**.
 
-The application stores configuration at:
+The application stores its configuration at:
 
-`~/.config/github-search/config.json`
+**~/.config/github-search/config.json**
 
-The configuration file is saved with owner-only permissions where supported. **Never share your token, include it in screenshots, or commit it to GitHub.** A token is optional; do not grant permissions the application does not need.
+The configuration file is written with owner-only permissions (0600). Never share your token or commit it to this repository.
 
-## Data locations
+## Reports and configuration
 
-| Data | Default location |
-|---|---|
-| Installed application | `/opt/github-search` |
-| Settings and token | `~/.config/github-search/config.json` |
-| Exported reports | `~/github-search-reports/` |
-| Cloned repositories | `~/github/` |
+Reports are saved in:
+
+**~/github-search-reports/**
+
+The configuration file is saved in:
+
+**~/.config/github-search/config.json**
+
+The clone directory defaults to:
+
+**~/github/**
 
 ## Project structure
 
 ~~~text
 GitHub-Search/
 ├── README.md
-├── LICENSE
-├── install.sh
-├── run.sh
-├── remote-install.sh
-├── doctor.sh
-├── arcticfox_gui.py
-├── arcticfox-cli.py
-├── arcticfox_core.py
-├── assets/
-│   ├── arcticfox-icon.png
-│   ├── moonlit-fox-splash.png
-│   ├── moonlit-fox-splash.gif
-│   ├── icon-v1.png
-│   └── logo-v1.png
-└── docs/
-    ├── screenshot-main.png
-    ├── screenshot-details.png
-    └── screenshot-settings.png
+└── GitHub-Search-v1/
+    ├── arcticfox_gui.py
+    ├── arcticfox-cli.py
+    ├── arcticfox_core.py
+    ├── install.sh
+    ├── run.sh
+    ├── remote-install.sh
+    ├── doctor.sh
+    ├── LICENSE
+    ├── README.md
+    ├── assets/
+    │   ├── arcticfox-icon.png
+    │   ├── icon-v1.png
+    │   ├── logo-v1.png
+    │   ├── moonlit-fox-splash.png
+    │   └── moonlit-fox-splash.gif
+    └── docs/
+        ├── screenshot-main.png
+        ├── screenshot-details.png
+        └── screenshot-settings.png
 ~~~
 
 ## Troubleshooting
 
 ### GUI does not open
-
-Install Python and Tkinter, then run the diagnostic script:
 
 ~~~bash
 sudo apt update
@@ -289,53 +224,51 @@ sudo apt install -y python3 python3-tk
 bash doctor.sh
 ~~~
 
-You can also start the GUI directly to see any Python error:
+Run from the application directory to see startup errors:
 
 ~~~bash
 python3 arcticfox_gui.py
 ~~~
 
-### Tkinter is missing
+### Splash image is missing
 
-~~~bash
-sudo apt install -y python3-tk
-~~~
+Confirm the following file exists:
 
-### No display detected
+**assets/moonlit-fox-splash.png**
 
-The GUI needs a desktop session. If you are connected through SSH or using a headless environment, use:
+If running the installed application, confirm the installer copied it to:
 
-~~~bash
-python3 arcticfox-cli.py
-~~~
+**/opt/github-search/assets/moonlit-fox-splash.png**
 
-### Git is missing
-
-~~~bash
-sudo apt install -y git
-~~~
-
-### Startup splash is missing
-
-Check that this file exists in the project folder:
-
-~~~text
-assets/moonlit-fox-splash.png
-~~~
-
-If the application is installed, reinstall it from the project folder to copy the current assets:
+Reinstall from the project directory after updating:
 
 ~~~bash
 sudo bash install.sh
 ~~~
 
-### GitHub API rate limit reached
+### GitHub avatar does not display
 
-Wait for the limit to reset or add an optional token in **Settings**. Do not post your token in a public issue or screenshot.
+Check your internet connection. For broader image-format support, install Pillow:
+
+~~~bash
+python3 -m pip install --user Pillow
+~~~
+
+### GitHub rate limit reached
+
+Wait for the rate limit to reset or configure a personal access token in Settings. Do not paste tokens into issues, screenshots, or public messages.
+
+### No display / SSH / headless system
+
+The GUI needs a desktop session. Use terminal mode instead:
+
+~~~bash
+python3 arcticfox-cli.py
+~~~
 
 ### Launcher command not found
 
-Open a new terminal and check that `/usr/local/bin` is in your PATH. You can also launch without installing:
+Open a new terminal after installation and check that **/usr/local/bin** is in your PATH. You can also run the application directly with:
 
 ~~~bash
 bash run.sh
@@ -343,38 +276,55 @@ bash run.sh
 
 ## Security and responsible use
 
-GitHub Search uses the official GitHub REST API to retrieve information GitHub makes publicly available. It does not bypass private repository permissions. Respect GitHub's Terms of Service, API limits, and user privacy. Keep API tokens private and use the application responsibly.
+GitHub Search uses the official GitHub REST API to retrieve information made publicly available by GitHub. It does not bypass private repository permissions. Respect GitHub's Terms of Service, API limits, and user privacy. Keep access tokens private.
 
 ## Version history
 
 ### v1.0
 
-- GitHub Dark Pro interface redesign.
-- Animated header, tab underline, search-mode control, and button hover effects.
-- In-window 3-second startup splash with progress animation.
-- Circular profile avatars and updated application artwork.
-- GUI and terminal editions.
-- GitHub user search, profile inspection, repository browsing, and cloning.
-- Public gists and recent activity.
-- TXT report saving and JSON export.
-- Optional API token and configurable clone directory.
-- Kali Linux installer, quick launcher, and diagnostic script.
+- **Full redesign — "GitHub Dark Pro":** carbon-dark surfaces straight from GitHub's own dark palette with emerald CTA buttons, azure links and violet spark highlights; the old look is gone from every widget, button, dialog and chart color.
+- **Consistent motion system:** every animation (hovers, tab underline, search-mode knob, boot reveal, toasts) runs on one timing scale — 120 ms / 220 ms / 320 ms — for a smooth professional feel.
+- **Animated header entrance:** the brand slides in from the left and the status pills from the right each time the app appears.
+- **In-app boot splash:** the window opens at its normal size and the wallpaper fills the window for exactly 3 seconds (cover-fit scaling, upscaled with Pillow when needed) with an animated progress bar. The boot is painted before the window maps (first frame = wallpaper, zero flicker) and then melts smoothly into the app background instead of hard-swapping. The boot screen lives inside the app window — no fullscreen takeover, and it follows window resizes while booting.
+- **Circular profile avatar:** photos are clipped to a perfect circle with an anti-aliased mask and wrapped in a glowing accent ring; the fallback initials render on a circle too.
+- **New logo & icon style:** a fresh magnifier-with-git-branch app icon (`icon-v1.png`) and header logo (`logo-v1.png`), plus a restyled header wordmark ("FIND · INSPECT · CLONE").
+- **Renamed the tool to "GitHub Search"** across the GUI, CLI, installers and menu entries.
+- Search started from the command line now runs after the splash finishes.
+- Settings dialog height increased so all controls fit.
+
+### v5.0.3
+
+- Updated the moonlit splash startup flow and native image loading.
+- Improved launcher handling for CLI mode and paths.
+- Installer now copies the splash GIF and other runtime artwork into the installed assets directory.
+- Corrected the remote installer to use this repository and its nested application directory.
+- Updated the application version and repository URL.
+
+### v5.0.2
+
+- Added the GitHub Dark Pro splash artwork and blue-violet interface palette.
+- Improved avatar image handling.
+
+### v5.0.1
+
+- Improved startup visibility and screen-size handling.
+- Fixed the CLI fallback argument forwarding.
 
 ## License
 
 **GitHub Search is proprietary software.** All rights are reserved by the copyright holder. Viewing the source and personal evaluation are permitted. Copying, modifying, redistributing, sublicensing, or creating derivative works requires prior written permission.
 
-See [LICENSE](LICENSE). This project is **not** distributed under the MIT License.
+See the [Proprietary License](GitHub-Search-v1/LICENSE) in this directory. This project is **not** distributed under the MIT License.
 
 ## Support
 
-If you find a bug, open an [issue](https://github.com/arcticfox-cyber/GitHub-Search/issues). Include your Linux distribution, Python version, command used, and relevant error output. Remove tokens and other private information before sharing logs.
+Found a bug? Open an [issue](https://github.com/arcticfox-cyber/GitHub-Search/issues) and include your Linux distribution, Python version, launch command, and relevant error output. Remove tokens and other secrets before sharing logs.
 
 ---
 
 <div align="center">
 
-**🦊 GITHUB SEARCH**
+**🌙 GITHUB SEARCH**
 
 *Explore · Discover · Inspect*
 
