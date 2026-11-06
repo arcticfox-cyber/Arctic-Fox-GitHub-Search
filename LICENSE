@@ -1,0 +1,55 @@
+GITHUB SEARCH — PROPRIETARY SOFTWARE LICENSE
+Copyright (c) 2026 Arctic Fox (@arcticfox-cyber). All rights reserved.
+
+IMPORTANT: THIS IS NOT AN OPEN-SOURCE LICENSE.
+
+1. OWNERSHIP
+GitHub Search, including its source code, object code, architecture, algorithms, interface, visual design, graphics, icons, logos, splash artwork, documentation, and other original project materials (collectively, the "Software"), is proprietary and is protected by applicable copyright and other intellectual-property laws. All rights not expressly granted in this License are reserved by the copyright holder.
+
+This License does not claim ownership of GitHub, the GitHub name or logo, Python, Kali Linux, third-party libraries, or other materials belonging to their respective owners. Those materials remain subject to their own terms.
+
+2. LIMITED PERMISSION TO VIEW
+The Software is published in a public repository solely so that people can view and evaluate the project. Subject to applicable law and this License, you may view the repository contents on GitHub for personal evaluation.
+
+No permission is granted to install, run, use, reproduce, copy, modify, adapt, translate, merge, publish, distribute, sublicense, sell, commercially exploit, or create derivative works from the Software or any portion of it, except where the copyright holder gives prior written permission or applicable law expressly requires otherwise.
+
+3. PROHIBITED ACTIVITIES
+Without prior written permission from the copyright holder, you must not, directly or indirectly:
+
+(a) copy, download for reuse, reproduce, republish, mirror, or redistribute the Software or substantial portions of it;
+(b) modify, adapt, translate, port, decompile, disassemble, or create derivative works from the Software, except to the extent a restriction is prohibited by applicable mandatory law;
+(c) use the Software, its code, design, assets, documentation, or a confusingly similar version in another product, service, repository, package, or offering;
+(d) remove, obscure, alter, or misrepresent copyright notices, attribution, license terms, author information, or proprietary notices;
+(e) claim authorship, ownership, development, or endorsement of the Software or any part of it;
+(f) sell, rent, lease, sublicense, publish, host, provide access to, or commercially exploit the Software;
+(g) use the Software or its materials to create, train, or improve a competing or substantially similar product, except where such restriction is prohibited by applicable law; or
+(h) use the copyright holder's name, project name, logos, icons, or branding to imply sponsorship, affiliation, or endorsement without written approval.
+
+4. NO TRANSFER OF RIGHTS
+Access to this public repository does not transfer ownership or grant any patent, trademark, trade-secret, copyright, or other intellectual-property license. No rights are granted by implication, estoppel, exhaustion, or otherwise.
+
+5. THIRD-PARTY MATERIALS
+Components, libraries, services, names, and trademarks owned by third parties are not covered by this License and remain subject to their respective licenses and terms. If a third-party component's license grants rights that cannot legally be restricted by this License, those rights remain unaffected.
+
+6. PERMISSION REQUESTS
+To request a separate written license for use, modification, redistribution, or commercial arrangements, contact the copyright holder through the GitHub profile:
+https://github.com/arcticfox-cyber
+
+Permission is valid only when explicitly granted in writing by the copyright holder. Silence, repository visibility, issue discussions, pull requests, or informal acknowledgements do not constitute permission.
+
+7. DISCLAIMER OF WARRANTY
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT. THE COPYRIGHT HOLDER DOES NOT WARRANT THAT THE SOFTWARE WILL BE ERROR-FREE, SECURE, OR UNINTERRUPTED.
+
+8. LIMITATION OF LIABILITY
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE COPYRIGHT HOLDER SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR FOR LOSS OF DATA, PROFITS, REVENUE, BUSINESS, OR GOODWILL, ARISING OUT OF OR RELATING TO ACCESS TO OR INABILITY TO USE THE SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. NOTHING IN THIS LICENSE EXCLUDES LIABILITY THAT CANNOT LAWFULLY BE EXCLUDED.
+
+9. TERMINATION
+Any permission granted under this License terminates automatically if you materially breach its terms. Upon termination, you must stop any activity that relied on the terminated permission and, where legally required, delete copies made under that permission. Sections intended by their nature to survive termination will remain in effect.
+
+10. APPLICABLE LAW
+This License is subject to applicable law. Any provision that is unenforceable in a jurisdiction shall be limited only to the minimum extent necessary, and the remaining provisions shall continue to apply. No term in this License is intended to remove rights that cannot legally be waived or restricted.
+
+11. ALL RIGHTS RESERVED
+All rights not expressly granted are reserved. This Software is NOT licensed under MIT, Apache-2.0, GPL, BSD, or any other open-source license.
+
+For permissions, contact: https://github.com/arcticfox-cyber
