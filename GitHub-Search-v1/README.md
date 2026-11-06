@@ -198,7 +198,6 @@ GitHub-Search-v1/
 ├── run.sh
 ├── remote-install.sh
 ├── doctor.sh
-├── LICENSE
 ├── README.md
 ├── assets/
 │   ├── arcticfox-icon.png
