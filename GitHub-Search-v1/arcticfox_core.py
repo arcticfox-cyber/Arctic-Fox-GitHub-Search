@@ -19,7 +19,7 @@ from pathlib import Path
 VERSION = "1.0"
 APP_NAME = "GitHub Search"
 TAGLINE = "GitHub Account & Repository Inspector"
-REPO_URL = "https://github.com/arcticfox-cyber/Arctic-Fox-GitHub-Search"
+REPO_URL = "https://github.com/arcticfox-cyber/GitHub-Search"
 
 CONF_DIR = Path(os.environ.get("XDG_CONFIG_HOME") or (Path.home() / ".config")) / "github-search"
 CONF_FILE = CONF_DIR / "config.json"
