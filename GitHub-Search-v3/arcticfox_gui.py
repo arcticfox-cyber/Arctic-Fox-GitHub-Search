@@ -59,6 +59,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+import arcticfox_core as core  # noqa: E402
+
 # ---- friendly start-up guard: never crash with a raw traceback -------------
 def _gui_unavailable(reason):
     """Explain why the GUI cannot start and offer terminal mode instead."""
@@ -96,8 +98,6 @@ except ImportError:
             print(__doc__)
         sys.exit(0)
     _gui_unavailable("Tkinter (python3-tk) is not installed.")
-
-import arcticfox_core as core  # noqa: E402
 
 
 # ------------------------------------------------------------------ theme --
