@@ -38,4 +38,5 @@ DIR="$ROOT_DIR/$APP_DIR"
 }
 
 echo "[*] Starting GitHub Search v3.0 installer ..."
-exec bash "$DIR/install.sh" "$@"
+bash "$DIR/install.sh" "$@"
+exit $?
