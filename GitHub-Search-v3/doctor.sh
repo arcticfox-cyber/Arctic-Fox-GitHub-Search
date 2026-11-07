@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # =============================================================================
-#   GITHUB SEARCH v2.0 — Doctor
+#   GITHUB SEARCH v3.0 — Doctor
 #   Run this when something does not work:
 #
 #       bash doctor.sh
