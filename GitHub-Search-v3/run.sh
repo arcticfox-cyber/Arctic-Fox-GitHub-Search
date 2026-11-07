@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # =============================================================================
-#   GITHUB SEARCH v2.0 — Quick Launcher (no installation needed)
+#   GITHUB SEARCH v3.0 — Quick Launcher (no installation needed)
 #
 #   bash run.sh                 start the GUI
 #   bash run.sh octocat         start GUI and search a username
